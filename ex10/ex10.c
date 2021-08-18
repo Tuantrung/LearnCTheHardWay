@@ -1,4 +1,5 @@
-/* this code print the a vowel charater as the higher charater */
+/* this program print one by one a vowel charater in a string as the higher
+charater */
 #include <stdio.h>
 
 int main(int argc, char *argv[])

@@ -1,4 +1,4 @@
-/* this code covert the higher charater in the string to lower charater */
+/* this program covert higher charaters in a string to lower charaters */
 #include <stdio.h>
 
 int main(int argc, char *argv[])
