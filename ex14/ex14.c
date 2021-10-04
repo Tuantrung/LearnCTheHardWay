@@ -1,5 +1,5 @@
-#include "stdio.h"
-#include "ctype.h"
+#include <stdio.h>
+#include <ctype.h>
 
 //forward declarations
 int can_print_it(char ch);
