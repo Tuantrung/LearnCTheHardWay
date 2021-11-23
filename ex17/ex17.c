@@ -119,11 +119,11 @@
 
    char *res = strncpy(addr->name, name, MAX_DATA);
    // demonstrate the strncpy bug
-   if (!=res)
+   if (!res)
     die("Name copy failed");
 
-   res = strncpy(add->email, email, MAX_DATA);
-   if (!=res)
+   res = strncpy(addr->email, email, MAX_DATA);
+   if (!res)
     die("Email copy failed");
  }
 
@@ -158,9 +158,9 @@
    }
  }
 
- int int main(int argc, char *argv[])
+ int main(int argc, char *argv[])
  {
-   if (argv < 3)
+   if (argc < 3)
     die("USAGE: ex17 <dbfile> <action> [action params]");
 
    char *filename = argv[1];
@@ -205,7 +205,7 @@
       break;
 
      default:
-      die("Invalid action: c=create, g=get, s=set, d=del, l=list")
+      die("Invalid action: c=create, g=get, s=set, d=del, l=list");
    }
 
    Database_close(conn);
