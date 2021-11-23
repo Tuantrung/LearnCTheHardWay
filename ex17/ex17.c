@@ -12,16 +12,16 @@
   int set;
   char name[MAX_DATA];
   char email[MAX_DATA];
-};
+ };
 
  struct Database {
   struct Address rows[MAX_ROWS];
-};
+ };
 
  struct Connection {
   FILE *file;
   struct Database *db;
-};
+ };
 
  void die(const char *message)
  {
@@ -32,7 +32,7 @@
   }
 
   exit(1);
-}
+ }
 
  void Address_print(struct Address *addr)
  {
