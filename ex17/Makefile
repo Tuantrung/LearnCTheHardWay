@@ -1,6 +1,6 @@
-CFLAGS=-Wall -g
+CFLAGS=-Wall -g3
 
-all: ex17
+all: ex17_fix_bug
 
 clean:
-	rm -f ex17
+	rm -f ex17_fix_bug
