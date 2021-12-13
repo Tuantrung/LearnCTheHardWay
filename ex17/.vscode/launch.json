@@ -11,10 +11,8 @@
             "program": "${workspaceFolder}\\ex17_fix_bug",
             "args": [
                 "db.dat",
-                "s",
-                "1",
-                "zed",
-                "zed@zedshaw"
+                "d",
+                "3",
             ],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",

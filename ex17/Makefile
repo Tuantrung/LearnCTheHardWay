@@ -3,7 +3,7 @@ CFLAGS=-Wall -g3
 all: ex17_fix_bug
 
 clean:
-	rm -f ex17_fix_bug 
+	rm -f ex17_fix_bug
 	
 test:
 	./test.sh
