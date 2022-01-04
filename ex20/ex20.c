@@ -1,3 +1,4 @@
+#include "dbg.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -66,6 +67,8 @@ int strange_order(int a, int b)
         return a % b;
     }
 }
+
+
 /*
  Used to test that we are sorting things correctly
  by doing the sort and printing sort
@@ -85,6 +88,24 @@ void testing_sorting(int *numbers, int count, compare_cb cmp)
     printf("\n");
 
     free(sorted);
+}
+
+void dump(compare_cb cmp)
+{
+    int i = 0;
+
+    check(cmp != NULL, "Invalid function ptr to dump.");
+    unsigned char *data = (unsigned char *)cmp;
+
+    for (i = 0; i < 25; i++) {
+        printf("%02x:", data[i]);
+    }
+
+    printf("\n");
+
+error:
+    printf("\n");
+
 }
 
 int main(int argc, char *argv[]) 
@@ -109,6 +130,9 @@ int main(int argc, char *argv[])
     testing_sorting(numbers, count, strange_order);
 
     free(numbers);
+
+    printf("SORTED:");
+    dump(numbers);
 
     return 0;   
 }
